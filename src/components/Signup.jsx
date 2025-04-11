@@ -10,10 +10,10 @@ function Signup() {
 
     const navigate = useNavigate();
     const dispatch = useDispatch();
-    const {error, setError} = useState('');
+    const [error, setError] = useState('');
     const {register, handleSubmit} = useForm();
 
-    const create = async(date) => {
+    const create = async(data) => {
         setError('')
 
         try{
@@ -46,7 +46,7 @@ function Signup() {
                 <p className="mt-2 text-center text-base text-black/60">
                     Already have an account? 
 
-                    <Link to='/singup' className="font-medium text-primary transition-all duration-200 hover:underline">Sign Up</Link>
+                    <Link to='/Login' className="font-medium text-primary transition-all duration-200 hover:underline">Sign Up</Link>
                 </p>
 
                 {error && <p className="text-red-600 mt-8 text-center">{error}</p>}
